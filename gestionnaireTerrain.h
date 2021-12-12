@@ -3,22 +3,30 @@
 
 #include <iostream>
 #include "json.hpp"
-#include "terrain.h"
+#include "Terrains.h"
+
+using std::vector;
+using std::unique_ptr;
+using std::make_unique;
+using std::string;
+using std::cout;
+using std::cin;
+using std::endl;
 
 class gestionnaireTerrain {
 public:
-    gestionnaireTerrain(const std::string& nomFichier);
+    gestionnaireTerrain(const string& nomFichier);
     void execute();
 private:
     int choixMenu();
     void creerTerrain();
-    void saveToJSON(std::vector<Terrain> tTerrain);
+    void saveToJSON(vector<Terrain> tTerrain);
     void supprimerTerrain();
-    void visualisation() const;
-    std::vector<Terrain> initialisation(const std::string& nomFichier);
-
-    std::vector<Terrain> d_Terrains;
-    std::string d_Filename;
+    void visualisation(const vector<Terrain>& tTerrain);
+        
+    vector<Terrain> initialisation(const string& nomFichier);
+    vector<Terrain> d_Terrains;
+    string d_Filename;
 };
 
 #endif // GESTIONNAIRETERRAIN_H
