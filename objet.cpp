@@ -17,7 +17,7 @@ geom::point objet::getP2() const {
 }
 
 void objet::setP2(const geom::point& p){
-        d_p1.moveTo(p.x(), p.y());
+        d_p2.moveTo(p.x(), p.y());
 }
 
 int objet::getType() const {
