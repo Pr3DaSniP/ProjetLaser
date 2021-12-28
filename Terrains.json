@@ -1,7 +1,7 @@
 [
     {
-        "NbColonnes": 11,
-        "NbLignes": 20,
+        "NbColonnes": 20,
+        "NbLignes": 11,
         "Terrain": [
             [
                 "X",
@@ -248,8 +248,8 @@
         ]
     },
     {
-        "NbColonnes": 11,
-        "NbLignes": 20,
+        "NbColonnes": 20,
+        "NbLignes": 11,
         "Terrain": [
             [
                 "X",
@@ -496,8 +496,8 @@
         ]
     },
     {
-        "NbColonnes": 11,
-        "NbLignes": 20,
+        "NbColonnes": 20,
+        "NbLignes": 11,
         "Terrain": [
             [
                 "X",
@@ -735,6 +735,47 @@
                 "X",
                 "X",
                 "X",
+                "X",
+                "X",
+                "X",
+                "X",
+                "X"
+            ]
+        ]
+    },
+    {
+        "NbColonnes": 5,
+        "NbLignes": 5,
+        "Terrain": [
+            [
+                "X",
+                "X",
+                "@",
+                "X",
+                "X"
+            ],
+            [
+                "X",
+                " ",
+                " ",
+                " ",
+                "X"
+            ],
+            [
+                "=",
+                " ",
+                " ",
+                " ",
+                "X"
+            ],
+            [
+                "X",
+                " ",
+                " ",
+                " ",
+                "X"
+            ],
+            [
                 "X",
                 "X",
                 "X",

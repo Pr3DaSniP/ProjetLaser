@@ -3,7 +3,8 @@
 
 #include <iostream>
 #include "json.hpp"
-#include "Terrains.h"
+#include "terrain.h"
+//#include "afficheur.h"
 
 using std::vector;
 using std::unique_ptr;
@@ -17,15 +18,15 @@ class gestionnaireTerrain {
 public:
     gestionnaireTerrain(const string& nomFichier);
     void execute();
+    vector<terrain> getTerrains();
 private:
     int choixMenu();
     void creerTerrain();
-    void saveToJSON(vector<Terrain> tTerrain);
+    void saveToJSON(vector<terrain>& tTerrain);
     void supprimerTerrain();
-    void visualisation(const vector<Terrain>& tTerrain);
-        
-    vector<Terrain> initialisation(const string& nomFichier);
-    vector<Terrain> d_Terrains;
+    void visualisation(const vector<terrain>& tTerrain);
+    vector<terrain> initialisation(const string& nomFichier);
+    vector<terrain> d_Terrains;
     string d_Filename;
 };
 
