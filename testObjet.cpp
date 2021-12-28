@@ -16,7 +16,7 @@ TEST_CASE("La creation d'objet est correcte")
     int t= o.getType();
     REQUIRE_EQ(t, type);
 }
-TEST_CASE("Le changement de cordonnées d'objet est correcte")
+TEST_CASE("Le changement de cordonnÃ©es d'objet est correcte")
 {
     geom::point p1{4.2, 5.3};
     geom::point p2{6.2, 5.3};
@@ -28,7 +28,7 @@ TEST_CASE("Le changement de cordonnées d'objet est correcte")
     o.setP2(p2);
     geom::point poi= o.getP2();
     REQUIRE_EQ(poi, p2);
-    o.settype(type);
+    o.setType(type);
     int t= o.getType();
     REQUIRE_EQ(t, type);
 }
