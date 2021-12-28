@@ -24,6 +24,6 @@ int objet::getType() const {
 	return d_type;
 }
 
-void objet::settype(int type){
+void objet::setType(int type){
         d_type= type;
 }
