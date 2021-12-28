@@ -79,30 +79,28 @@ TEST_CASE("Inserer un objet fonctionne correctement")
     SUBCASE("Inserer un miroir fonctionne correctement")
     {
         SUBCASE("Inserer un miroir '/' fonctionne correctement") {
-            miroir m{ {0,0}, {terrain::TAILLECASE, terrain::TAILLECASE}, OBJET::MIROIR_SLASH, INCLINAISON::SLASH};
+            miroir m{ {0,0}, {terrain::TAILLECASE, terrain::TAILLECASE}, OBJET::MIROIR_SLASH};
 
             t.insertCase(
                          0,0,
                          std::make_unique<miroir>(
                                 m.getP1(),
                                 m.getP2(),
-                                m.getType(),
-                                m.inclinaison()
+                                m.getType()
                          )
             );
 
             REQUIRE_EQ(t.getObjet(0,0)->getType(), OBJET::MIROIR_SLASH);
         }
         SUBCASE("Inserer un miroir '\' fonctionne correctement") {
-            miroir m{ {0,0}, {terrain::TAILLECASE, terrain::TAILLECASE}, OBJET::MIROIR_BACKSLASH, INCLINAISON::BACKSLASH};
+            miroir m{ {0,0}, {terrain::TAILLECASE, terrain::TAILLECASE}, OBJET::MIROIR_BACKSLASH};
 
             t.insertCase(
                          0,0,
                          std::make_unique<miroir>(
                                 m.getP1(),
                                 m.getP2(),
-                                m.getType(),
-                                m.inclinaison()
+                                m.getType()
                          )
             );
 
@@ -151,12 +149,12 @@ TEST_CASE("La recuperation d'un objet fonctionne correctement")
     t.insertCase(3,0,std::make_unique<cible>(c.getP1(),c.getP2(),c.getType()));
 
     // 200,0 ---- 250,50
-    miroir m2{ {4*terrain::TAILLECASE,0}, {5*terrain::TAILLECASE, terrain::TAILLECASE}, OBJET::MIROIR_SLASH, INCLINAISON::SLASH};
-    t.insertCase(4,0,std::make_unique<miroir>(m2.getP1(),m2.getP2(),m2.getType(), m2.inclinaison()));
+    miroir m2{ {4*terrain::TAILLECASE,0}, {5*terrain::TAILLECASE, terrain::TAILLECASE}, OBJET::MIROIR_SLASH};
+    t.insertCase(4,0,std::make_unique<miroir>(m2.getP1(),m2.getP2(),m2.getType()));
 
     // 250,0 ---- 300,50
-    miroir m3{ {5*terrain::TAILLECASE,0}, {6*terrain::TAILLECASE, terrain::TAILLECASE}, OBJET::MIROIR_BACKSLASH, INCLINAISON::BACKSLASH};
-    t.insertCase(5,0,std::make_unique<miroir>(m3.getP1(),m3.getP2(),m3.getType(),m3.inclinaison()));
+    miroir m3{ {5*terrain::TAILLECASE,0}, {6*terrain::TAILLECASE, terrain::TAILLECASE}, OBJET::MIROIR_BACKSLASH};
+    t.insertCase(5,0,std::make_unique<miroir>(m3.getP1(),m3.getP2(),m3.getType()));
 
     // 300,0 ---- 350,50
     rayon r{ {6*terrain::TAILLECASE,0}, {7*terrain::TAILLECASE, terrain::TAILLECASE}, OBJET::RAYON };
@@ -310,8 +308,8 @@ TEST_CASE("Les fonctions pour le bon deroulement du jeu fonctionnent correctemen
         REQUIRE_EQ(c->getType(), OBJET::CIBLE);
     }
 
-    miroir m{ {2*terrain::TAILLECASE, 2*terrain::TAILLECASE}, {3*terrain::TAILLECASE, 3*terrain::TAILLECASE}, OBJET::MIROIR_SLASH, INCLINAISON::SLASH};
-    t.insertCase(2,2,std::make_unique<miroir>(m.getP1(),m.getP2(),m.getType(), m.inclinaison()));
+    miroir m{ {2*terrain::TAILLECASE, 2*terrain::TAILLECASE}, {3*terrain::TAILLECASE, 3*terrain::TAILLECASE}, OBJET::MIROIR_SLASH};
+    t.insertCase(2,2,std::make_unique<miroir>(m.getP1(),m.getP2(),m.getType()));
 
     SUBCASE("La propagation du laser se deroule proprement")
     {
