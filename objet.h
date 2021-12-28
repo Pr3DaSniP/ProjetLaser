@@ -11,7 +11,7 @@ public:
 	int getType() const;
 	void setP1(const geom::point& p);
 	void setP2(const geom::point& p);
-	void settype(int type);
+	void setType(int type);
 	virtual ~objet() = default;
 
 private:
