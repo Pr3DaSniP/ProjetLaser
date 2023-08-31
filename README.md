@@ -1,8 +1,9 @@
 # Laser game
 
-![Language](https://img.shields.io/badge/language-C++-blue.svg)
+![Language](https://img.shields.io/badge/Language-C++-blue.svg)
 ![IDE](https://img.shields.io/badge/IDE-Code::Blocks-green.svg)
-![Libraries](https://img.shields.io/badge/libraries-WinBGI-orange.svg)
+![Libraries](https://img.shields.io/badge/Libraries-WinBGI-orange.svg)
+![Tests](https://img.shields.io/badge/Tests-doctest-magenta.svg)
 
 Jeu de destruction de cible par laser. On tire avec un laser dans un terrain, le rayon est dévié avec des miroirs placés au préalable par le joueur pour éviter que le laser casse les murs et pour qu’il atteigne la cible.
 
@@ -20,7 +21,7 @@ De même pour les objets dans le jeu, il suffit de créer une nouvelle classe h�
 
 #### Démonstration
 
-Menu du jeu :
+Menu du jeu : <br />
 ![Démonstration](assets/menu.png)
 
 Jeu (Headless) :
@@ -71,6 +72,17 @@ Le terrain créé est ensuite sauvegardé dans un fichier JSON.
     ]
 }
 ```
+
+#### Exemple de terrain
+
+| ![Démonstration](assets/t1.png) | ![Démonstration](assets/t2.png) | ![Démonstration](assets/t3.png) |
+|:---:|:---:|:---:|
+
+#### Tests unitaires
+
+Les tests unitaires sont réalisés avec la bibliothèque [doctest](https://github.com/doctest/doctest). Les fichiers de tests portent le nom `test*.cpp`.
+
+![Tests unitaires](assets/test_unitaire.png)
 
 ## Auteurs
 
